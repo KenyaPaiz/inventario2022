@@ -16,5 +16,20 @@ class Marca{
             }
         }
     }
+
+    function verMarcas(){
+        require('conexion.php');
+        $query = "SELECT * FROM marca";
+        $resultado = mysqli_query($conn, $query);
+        while($imprimir = mysqli_fetch_array($resultado)){
+            $tabla = "";
+            $tabla = "<tr>";
+                $tabla .= "<td>".$imprimir['id']."</td>";
+                $tabla .= "<td>".$imprimir['nombre']."</td>";
+            $tabla .= "</tr>";
+            echo $tabla;
+        }
+        
+    }
 }
 ?>

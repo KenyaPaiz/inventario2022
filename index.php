@@ -16,6 +16,16 @@
         <input type="submit" name="registrar" value="Registrar Marca">
     </form>
     <?php $marca->registrarMarca(); ?>
-    <!--- que hay -->
+    <!--- Tabla de consultas -->
+    <br>
+    <table>
+        <thead>
+            <tr>ID</tr>
+            <tr>Nombre</tr>
+        </thead>
+        <tbody>
+            <?php $marca->verMarcas(); ?>
+        </tbody>
+    </table>
 </body>
 </html>
