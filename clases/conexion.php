@@ -8,5 +8,6 @@
     // Condicion que verifica la conexión con la base de datos
     if (!$conn) {
         //header("location:index.php");
+        //conexion
     }
 ?>
