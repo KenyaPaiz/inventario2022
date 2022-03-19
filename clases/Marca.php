@@ -33,6 +33,7 @@ class Marca{
     }
 
     function obtenerMarcaId(){
+        //esta es la para conexion de base de datos
         require('conexion.php');
     }
 }
