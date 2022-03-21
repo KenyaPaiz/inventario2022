@@ -15,17 +15,17 @@
         <input type="text" name="marca" placeholder="Ingrese el nombre de la marca">
         <input type="submit" name="registrar" value="Registrar Marca">
     </form>
-    <?php $marca->registrarMarca(); ?>
+    <?php $marca->registrar(); ?>
     <!--- Tabla de consultas -->
     <br>
     <table>
         <thead>
-            <tr>ID</tr>
-            <tr>Nombre</tr>
-            <tr>Accion</tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Accion</th>
         </thead>
         <tbody>
-            <?php $marca->verMarcas(); ?>
+            <?php $marca->consultar(); ?>
         </tbody>
     </table>
 </body>
