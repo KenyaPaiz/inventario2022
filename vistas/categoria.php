@@ -16,7 +16,7 @@
         <input type="submit" name="registrar" value="Registrar categoria">
     </form>
     <?php $categoria->registrar(); ?>
-    <!--- Tabla de consultas -->
+    
     <br>
     <table>
         <thead>
