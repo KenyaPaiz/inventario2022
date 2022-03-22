@@ -6,7 +6,7 @@ class Marca extends Conexion{
     public $nombre;
 
     public function registrar(){
-        $this->conexion();
+        $this->conectar();
         if(isset($_POST['marca'])){
             $this->nombre = $_POST['marca'];
             if(isset($_POST['registrar'])){
@@ -20,7 +20,7 @@ class Marca extends Conexion{
     }
 
     public function consultar(){
-        $this->conexion();
+        $this->conectar();
         $query = "SELECT * FROM marca";
         $resultado = mysqli_query($this->con, $query);
         while($imprimir = mysqli_fetch_array($resultado)){
@@ -37,7 +37,7 @@ class Marca extends Conexion{
 
     public function obtenerId(){
         //esta es la para conexion de base de datos
-        $this->conexion();
+        $this->conectar();
         if(isset($_POST['idmarca'])){
             $this->id = $_POST['idmarca'];
             $query = "SELECT * FROM marca WHERE id=$this->id";
@@ -52,7 +52,7 @@ class Marca extends Conexion{
     }
 
     public function actualizar(){
-        $this->conexion();
+        $this->conectar();
         if(isset($_POST['id'])){
             if(isset($_POST['actualizar'])){
                 $this->id = $_POST['id'];
@@ -71,3 +71,5 @@ class Marca extends Conexion{
     
 }
 ?>
+
+// xd 
