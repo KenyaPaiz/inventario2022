@@ -7,7 +7,7 @@
 
      public function registrar (){
          $this->conectar();
-         if isset($_POST['categoria'])){
+         if(isset($_POST['categoria'])){
              $this->nombre = $_POST['categoria'];
 
          }
