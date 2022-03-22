@@ -11,7 +11,7 @@
         require('../clases/Categoria.php');
         $categoria = new Categoria(); 
     ?>
-    <h1>Actualizar Marca</h1>
+    <h1>Actualizar Categoria</h1>
     <form method="POST">
         <?php $categoria->obtenerId(); ?>
         <input type="submit" name="actualizar" value="Actualizar Categoria">
