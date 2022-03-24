@@ -14,7 +14,8 @@ class Proveedor extends Conexion{
             $this->direccion = $_POST['direccion'];
             $this->telefono = $_POST['telefono'];
             if(isset($_POST['registrar'])){
-                $query = "INSERT INTO proveedor(nombre, direccion, telefono) VALUES ('$this->nombre','$this->direccion','$this->telefono')";
+                $query = "INSERT INTO proveedor(nombre, direccion, telefono) 
+                            VALUES ('$this->nombre','$this->direccion','$this->telefono')";
                 $resultado = mysqli_query($this->con,$query);
                 if(!empty($resultado)){
                     echo "Se agrego";

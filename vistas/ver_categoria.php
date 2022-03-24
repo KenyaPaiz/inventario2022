@@ -16,6 +16,6 @@
         <?php $categoria->obtenerId(); ?>
         <input type="submit" name="actualizar" value="Actualizar Categoria">
     </form>
-    <?php $categoria->actualizar(); ?>
+    <?php //$categoria->actualizar(); ?>
 </body>
 </html>

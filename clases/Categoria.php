@@ -22,10 +22,10 @@
 
      public function consultar(){
          $this->conectar();
-         $query ="SELECT * FROM consultar";
+         $query ="SELECT * FROM categoria";
          $resultado = mysqli_query($this->con,$query);
-         while($imprimir=mysqli_query($resultado));
-         $tabla="<tr>";
+         while($imprimir = mysqli_fetch_array($resultado)){
+            $tabla="<tr>";
                 $tabla .= "<td>".$imprimir['id']."</td>";
                 $tabla .= "<td>".$imprimir['nombre']."</td>";
                 $tabla .= "<form action='ver_categoria.php' method='POST'>";
@@ -33,10 +33,10 @@
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
-
+         }
      }
 
-     public function obtener(){
+     public function obtenerId(){
         $this->conectar();
         if(isset($_POST['id'])){
             $this->id = $_POST['id'];
