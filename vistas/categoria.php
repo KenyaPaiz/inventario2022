@@ -16,13 +16,6 @@
         <input type="submit" name="registrar" value="Registrar categoria">
     </form>
     <?php $categoria->registrar(); ?>
-
-    <form action="" method="POST">
-        <input type="text" name="categoria" placeholder="Ingrese el nombre de la categoria">
-        <input type="submit" name="Actualizar" value="Actualizar categoria">
-    </form>
-    <?php $categoria->actualizar(); ?>
-    
     <br>
     <table>
         <thead>
