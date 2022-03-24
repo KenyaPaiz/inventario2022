@@ -50,6 +50,24 @@
             }
         }
     }
+
+    public function actualizar(){
+        $this->conectar();
+        if(isset($_POST['id'])){
+            if(isset($_POST['actualizar'])){
+                $this->id = $_POST['id'];
+                $this->nombre = $_POST['nombre_categoria'];
+                $query = "UPDATE categoria SET nombre='$this->nombre' WHERE id=$this->id";
+                $resultado = mysqli_query($this->con, $query);
+                if(!empty($resultado)){
+                    header("location:Categoria.php");
+                }
+                else{
+                    echo "Error al actualizar categoría";
+                }
+            }
+        }
+    }
  }
 
 ?>
