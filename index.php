@@ -10,25 +10,29 @@
     <title>TienditaShop</title>
 </head>
 <body>
-    
+<?php 
+    require "clases/Administrador.php";
+    $admin = new Administrador();
+ ?> 
 <center>
-        <form action="" class="formulario">
+        <form action="" class="formulario" method="POST">
             <img class="imagen" src="recursos/icono.jpg" alt="Logo TienditaShop" width = "60" height = "60">
             <h1>Iniciar Sesión</h1>
             <div class="contenedor">
                 <div class="input-contenedor">
                     <i class="fa-solid fa-user" class="icono"></i>
-                    <input type="text" placeholder="Correo Electrónico">
+                    <input type="text" name="email" placeholder="Correo Electrónico">
                 </div>
                 <div class="input-contenedor">
                     <i class="fa-solid fa-key" class="icono"></i>
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña">
                 </div>
-                <input type="submit" value="Ingresar" class="btn">
+                <input type="submit" name="ingresar" value="Ingresar" class="btn">
                 <p>Al registrarte, aceptas nuestras Políticas y Condiciones.</p>
                 <p>¿Aún no tienes cuenta? <a class="link" href="registrarse.php">Regístrate</a></p>
             </div>
         </form>
+        <?php $admin->accederAdministrador(); ?>
 </center>
 </body>
 </html>
