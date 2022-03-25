@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php
-        // require('../clases/registrar_producto.php');
-        // $proveedor = new Proveedor();
+         require('../clases/Marca.php');
+         $marca = new Marca();
     ?>
     <form action="" method="POST">
         <h1>Registrar Producto</h1>
@@ -33,10 +33,7 @@
 
         <label for="marca">Marca</label>
         <select name="marca">
-            <option selected>Seleccionar</option>
-            <option value="value1">Value 1</option>
-            <option value="value2" >Value 2</option>
-            <option value="value3">Value 3</option>
+            <?php $marca->select(); ?>
         </select>
 
         <label for="proveedor">Proveedor</label>
