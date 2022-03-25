@@ -13,7 +13,7 @@
     
 <center>
         <form action="" class="formulario">
-            <img class="imagen" src="/recursos/icono.jpg" alt="Logo TienditaShop" width = "60" height = "60">
+            <img class="imagen" src="recursos/icono.jpg" alt="Logo TienditaShop" width = "60" height = "60">
             <h1>Iniciar Sesión</h1>
             <div class="contenedor">
                 <div class="input-contenedor">
