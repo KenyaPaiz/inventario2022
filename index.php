@@ -16,7 +16,7 @@
  ?> 
 <center>
         <form action="" class="formulario" method="POST">
-            <img class="imagen" src="recursos/icono.jpg" alt="Logo TienditaShop" width = "60" height = "60">
+            <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "70">
             <h1>Iniciar Sesión</h1>
             <div class="contenedor">
                 <div class="input-contenedor">
