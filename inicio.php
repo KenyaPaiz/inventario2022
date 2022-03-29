@@ -14,15 +14,17 @@
 
 <center>
    
-            <form method="POST">
+            
+            <form action="vistas/categoria.php" method="POST">
             <img class="imagen" src="recursos/icono.jpg" alt="Logo TienditaShop" width = "60" height = "60">
             <h1>¿Qué deseas hacer?</h1>
-            <form method="POST">
+            <input type="submit" value="ver Categoria">
             <i class="fa-solid fa-address-book" class="icono"></i>
-            <input type="submit" name="proveedores" value="Ver Proveedores">
-            </form>
             
-    
+            </form>
+
+<label for="">Marcas</label>
+    <a href="vistas/marca.php">Registrar Marcas</a>
 
         
 </center>
