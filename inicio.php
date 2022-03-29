@@ -16,7 +16,7 @@
 
             <!--IMPUT CATEGORÍA-->
 
-            <form action="vistas/proveedor.php" method="POST">
+            <form action="vistas/Categoria.php" method="POST">
             <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
             <h1>¿Qué deseas hacer?</h1>
             <div class="input-contenedor">
@@ -39,7 +39,7 @@
 
             <!--IMPUT PROVEEDOR-->
     
-            <form action="vistas/Categoria.php" method="POST">
+            <form action="vistas/proveedor.php" method="POST">
             <div class="input-contenedor">
             <i class="fa-solid fa-address-book"></i>
             <input type="submit" name="proveedor" value="Ver Proveedor" class="button">
