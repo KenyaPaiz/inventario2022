@@ -1,5 +1,5 @@
 <?php
-require('Conexion.php');
+require('conexion.php');
 //Responsabilidad unica
 class Marca extends Conexion{
     public $id;
@@ -34,19 +34,7 @@ class Marca extends Conexion{
             echo $tabla;
         } 
     }
-    //Para llenar un select con marcas
-    public function select(){
-        $this->conectar();
-        $query = "SELECT * FROM marca";
-        $resultado = mysqli_query($this->con, $query);
-        while($imprimir = mysqli_fetch_array($resultado)){
-            $select = "<option value='".$imprimir['id']."'>";
-                $select .= $imprimir['nombre'];
-            $select .= "</option>";
-            echo $select;
-        }
-    }
-
+    
     public function obtenerId(){
         //esta es la para conexion de base de datos
         $this->conectar();

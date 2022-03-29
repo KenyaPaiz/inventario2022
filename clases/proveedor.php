@@ -1,5 +1,5 @@
 <?php
-require('Conexion.php');
+require('conexion.php');
 //Responsabilidad unica
 class Proveedor extends Conexion{
     public $id;

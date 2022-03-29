@@ -8,8 +8,10 @@
 </head>
 <body>
     <?php
-         require('../clases/Marca.php');
-         $marca = new Marca();
+        
+         require('../clases/producto.php');
+         $producto = new Producto();
+        
     ?>
     <form action="" method="POST">
         <h1>Registrar Producto</h1>
@@ -25,47 +27,25 @@
 
         <label for="categoria">Categoria</label>
         <select name="categoria">
-            <option selected>Seleccionar</option>
-            <option value="value1">Value 1</option>
-            <option value="value2" >Value 2</option>
-            <option value="value3">Value 3</option>
+            <?php $producto->selectCategoria();?>
         </select>
 
         <label for="marca">Marca</label>
         <select name="marca">
-            <?php $marca->select(); ?>
+            <?php $producto->selectMarcas(); ?>
         </select>
 
         <label for="proveedor">Proveedor</label>
         <select name="proveedor">
-            <option selected>Seleccionar</option>
-            <option value="value1">Value 1</option>
-            <option value="value2" >Value 2</option>
-            <option value="value3">Value 3</option>
+            <?php $producto->selectProveedor(); ?>
         </select>
 
         <label for="cantidad">Cantidad</label>
         <input type="number" name="cantidad" placeholder="Cantidad...">
 
-        <input type="submit" name="registrar" value="Registrar Proveedor">
+        <input type="submit" name="registrar" value="Registrar Producto">
     </form>
-    <?php //$proveedor->registrar(); ?>
-    <!--- Tabla de consultas -->
-    <br>
-    <table>
-        <thead>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Categoria</th>
-            <th>Marca</th>
-            <th>Proveedor</th>
-            <th>Cantidad</th>
-        </thead>
-        <tbody>
-            <?php // $proveedor->consultar(); ?>
-        </tbody>
-    </table>
+    <?php $producto->registrar(); ?>
+    
 </body>
 </html>

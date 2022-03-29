@@ -35,7 +35,7 @@
             echo $tabla;
          }
      }
-
+    
      public function obtenerId(){
         $this->conectar();
         if(isset($_POST['id'])){
