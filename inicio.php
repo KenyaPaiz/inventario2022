@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="recursos/icono.jpg">
+    <link rel="icon" href="recursos/logo-carrito.png">
     <link rel="stylesheet" href="recursos/style-inicio.css">
     <script src="https://kit.fontawesome.com/36d396a1fc.js" crossorigin="anonymous"></script>
     <title>Seleciona acción a realizar</title>
@@ -13,48 +13,39 @@
 <body>
 
 <center>
-   
-            
-            <form action="vistas/proveedor.php" method="POST">
-            <img class="imagen" src="recursos/icono.jpg" alt="Logo TienditaShop" width = "60" height = "60">
+
+            <!--IMPUT CATEGORÍA-->
+
+            <form action="vistas/Categoria.php" method="POST">
+            <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
             <h1>¿Qué deseas hacer?</h1>
-            <input type="submit" value="ver Categoria">
-            <i class="fa-solid fa-address-book" class="icono"></i>
-            
+            <div class="input-contenedor">
+            <i class="fa-solid fa-layer-group"></i>
+            <input type="submit" name="categoria" value="Ver Categoria" class="button">
+            </div>
             </form>
 
 <!--<label for="">Marcas</label>
     <a href="vistas/marca.php">Registrar Marcas</a> --> 
 
-        
-</center>
+            <!--IMPUT MARCA-->
 
-
-
-<center>
             <form action="vistas/Marca.php" method="POST">
-            <form method="POST">
-            <i class="fa-solid fa-badge-check" class="icono"></i>
-            <input type="submit" name="marca" value="Ver Marcas">
+            <div class="input-contenedor">
+            <i class="fa-solid fa-splotch"></i>
+            <input type="submit" name="marca" value="Ver Marcas" class="button">
+            </div>
             </form>
+
+            <!--IMPUT PROVEEDOR-->
     
-
-        
-</center>
-
-
-
-<center>
-            <form action="vistas/Categoria.php" method="POST">
-            <form method="POST">
-            <i class="fa-solid fa-list-radio" class="icono"></i>
-            <input type="submit" name="categoria" value="Ver Categorias">
+            <form action="vistas/proveedor.php" method="POST">
+            <div class="input-contenedor">
+            <i class="fa-solid fa-address-book"></i>
+            <input type="submit" name="proveedor" value="Ver Proveedor" class="button">
+            </div>
             </form>
-   
-
-        
+            
 </center>
-
-
 </body>
 </html>
