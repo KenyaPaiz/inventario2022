@@ -23,7 +23,6 @@
             <th>Categoria</th>
             <th>Marca</th>
             <th>Proveedor</th>
-            
         </thead>
         <tbody>
             <?php $producto->consultar(); ?>

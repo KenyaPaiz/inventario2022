@@ -41,7 +41,10 @@
         </select>
 
         <label for="cantidad">Cantidad</label>
-        <input type="number" name="cantidad" placeholder="Cantidad...">
+        <input type="number" name="cantidad" placeholder="Cantidad..."><br>
+
+        <label for="">Imagen</label>
+        <input type="file" name="imagen" ><br>
 
         <input type="submit" name="registrar" value="Registrar Producto">
     </form>

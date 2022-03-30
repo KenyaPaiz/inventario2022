@@ -10,6 +10,7 @@
         public $idMarca;
         public $idProveedor;
         public $idEstado;
+        //public $img;
 
         //Para llenar un select con marcas
         public function selectMarcas(){
@@ -23,7 +24,7 @@
                 echo $select;
             }
         }
-    
+
         public function selectCategoria(){
             $this->conectar();
             $query = "SELECT * FROM categoria";
@@ -59,12 +60,13 @@
                 $this->idProveedor = $_POST['proveedor'];
                 $this->cantidad = $_POST['cantidad'];
                 $this->idEstado = 1;
+
                 if(isset($_POST['registrar'])){
                     $query = "INSERT INTO producto(nombre, descripcion, precio, cantidad, idcategoria, idmarca, idproveedor, idestado) 
                                 VALUES ('$this->nombre', '$this->descripcion','$this->precio',$this->cantidad,$this->idCategoria,$this->idMarca,$this->idProveedor,$this->idEstado)";
                     $resultado = mysqli_query($this->con,$query);
                     if(!empty($resultado)){
-                        echo "Se agrego";
+                        header("location:ver_producto.php");
                     }
                 }
             }
@@ -113,7 +115,7 @@
                 }
             }
         }
-    
+
         public function actualizar(){
             $this->conectar();
             if(isset($_POST['id'])){
