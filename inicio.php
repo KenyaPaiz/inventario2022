@@ -12,17 +12,17 @@
 
 <body>
 
-<center>
+        <main>
 
             <!--IMPUT CATEGORÍA-->
 
             <form action="vistas/Categoria.php" method="POST">
-            <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
-            <h1>¿Qué deseas hacer?</h1>
-            <div class="input-contenedor">
-            <i class="fa-solid fa-layer-group"></i>
-            <input type="submit" name="categoria" value="Ver Categoria" class="button">
-            </div>
+                <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
+                <h1>¿Qué deseas hacer?</h1>
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <input type="submit" name="categoria" value="Ver Categoria" class="button">
+                </div>
             </form>
 
 <!--<label for="">Marcas</label>
@@ -31,21 +31,21 @@
             <!--IMPUT MARCA-->
 
             <form action="vistas/Marca.php" method="POST">
-            <div class="input-contenedor">
-            <i class="fa-solid fa-splotch"></i>
-            <input type="submit" name="marca" value="Ver Marcas" class="button">
-            </div>
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-splotch"></i>
+                    <input type="submit" name="marca" value="Ver Marcas" class="button">
+                </div>
             </form>
 
             <!--IMPUT PROVEEDOR-->
     
             <form action="vistas/proveedor.php" method="POST">
-            <div class="input-contenedor">
-            <i class="fa-solid fa-address-book"></i>
-            <input type="submit" name="proveedor" value="Ver Proveedor" class="button">
-            </div>
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-address-book"></i>
+                    <input type="submit" name="proveedor" value="Ver Proveedor" class="button">
+                </div>
             </form>
             
-</center>
+        </main>
 </body>
 </html>

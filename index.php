@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="recursos/icono.jpg">
+    <link rel="icon" href="recursos/logo-carrito.png">
     <link rel="stylesheet" href="recursos/style-main.css">
     <script src="https://kit.fontawesome.com/36d396a1fc.js" crossorigin="anonymous"></script>
     <title>TienditaShop</title>
@@ -14,7 +14,7 @@
     require "clases/Administrador.php";
     $admin = new Administrador();
  ?> 
-<center>
+<main>
         <form action="" class="formulario" method="POST">
             <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "70">
             <h1>Iniciar Sesión</h1>
@@ -33,6 +33,6 @@
             </div>
         </form>
         <?php $admin->accederAdministrador(); ?>
-</center>
+</main>
 </body>
 </html>
