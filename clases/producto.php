@@ -5,11 +5,14 @@
         public $nombre;
         public $descripcion;
         public $precio;
-        public $cantidad;
+        public $stockTotal;
         public $idCategoria;
         public $idMarca;
         public $idProveedor;
         public $idEstado;
+        public $entrada;
+        public $salida;
+        public $cantidad;
         //public $img;
 
         //Para llenar un select con marcas
@@ -51,22 +54,23 @@
 
         public function registrar(){
             $this->conectar();
-            if(isset($_POST['nombre'], $_POST['descripcion'], $_POST['precio'], $_POST['categoria'], $_POST['marca'], $_POST['proveedor'], $_POST['cantidad'])){
+            if(isset($_POST['nombre'], $_POST['descripcion'], $_POST['precio'], $_POST['categoria'], $_POST['marca'], $_POST['proveedor'], $_POST['existencias'])){
                 $this->nombre = $_POST['nombre'];
                 $this->descripcion = $_POST['descripcion'];
                 $this->precio = $_POST['precio'];
                 $this->idCategoria = $_POST['categoria'];
                 $this->idMarca = $_POST['marca'];
                 $this->idProveedor = $_POST['proveedor'];
-                $this->cantidad = $_POST['cantidad'];
+                $this->stockTotal = $_POST['existencias'];
                 $this->idEstado = 1;
 
                 if(isset($_POST['registrar'])){
-                    $query = "INSERT INTO producto(nombre, descripcion, precio, cantidad, idcategoria, idmarca, idproveedor, idestado) 
-                                VALUES ('$this->nombre', '$this->descripcion','$this->precio',$this->cantidad,$this->idCategoria,$this->idMarca,$this->idProveedor,$this->idEstado)";
+                    $query = "INSERT INTO producto(nombre, descripcion, precio, idcategoria, idmarca, idproveedor, idestado, stockTotal) 
+                                VALUES ('$this->nombre', '$this->descripcion','$this->precio',$this->idCategoria,$this->idMarca,$this->idProveedor,$this->idEstado, $this->stockTotal)";
                     $resultado = mysqli_query($this->con,$query);
                     if(!empty($resultado)){
-                        header("location:ver_producto.php");
+                        
+                        header("location:ver_existencias.php");
                     }
                 }
             }
@@ -74,7 +78,7 @@
 
         public function consultar(){
             $this->conectar();
-            $query = "SELECT p.id, p.nombre, p.descripcion, p.precio, p.cantidad, c.nombre AS categoria, m.nombre AS marca, pv.nombre AS proveedor FROM producto AS p INNER JOIN categoria AS c ON p.idcategoria=c.id INNER JOIN marca AS m ON p.idmarca=m.id INNER JOIN proveedor AS pv ON p.idproveedor=pv.id";
+            $query = "SELECT p.id, p.nombre, p.descripcion, p.precio, c.nombre AS categoria, m.nombre AS marca, pv.nombre AS proveedor FROM producto AS p INNER JOIN categoria AS c ON p.idcategoria=c.id INNER JOIN marca AS m ON p.idmarca=m.id INNER JOIN proveedor AS pv ON p.idproveedor=pv.id";
             $resultado = mysqli_query($this->con, $query);
             while($imprimir = mysqli_fetch_array($resultado)){
                 $tabla = "<tr>";
@@ -82,7 +86,6 @@
                     $tabla .= "<td>".$imprimir['nombre']."</td>";
                     $tabla .= "<td>".$imprimir['descripcion']."</td>";
                     $tabla .= "<td> $ ".$imprimir['precio']."</td>";
-                    $tabla .= "<td>".$imprimir['cantidad']."</td>";
                     $tabla .= "<td>".$imprimir['categoria']."</td>";
                     $tabla .= "<td>".$imprimir['marca']."</td>";
                     $tabla .= "<td>".$imprimir['proveedor']."</td>";
@@ -135,6 +138,8 @@
                 }
             }
         }
+
+        
        
     }
 ?>
