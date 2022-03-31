@@ -18,7 +18,7 @@ class Proveedor extends Conexion{
                             VALUES ('$this->nombre','$this->direccion','$this->telefono')";
                 $resultado = mysqli_query($this->con,$query);
                 if(!empty($resultado)){
-                    echo "Se agrego";
+                    echo "Se agregó";
                 }
             }
         }
@@ -74,7 +74,7 @@ class Proveedor extends Conexion{
                     header("location:proveedor.php");
                 }
                 else{
-                    echo "Error al actualizar la marca";
+                    echo "Error al actualizar el proveedor";
                 }
             }
         }
