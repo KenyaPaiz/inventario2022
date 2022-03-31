@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Producto</title>
 </head>
 <body>
-    <?php 
-        require "../clases/producto.php";
-        $producto = new Producto();
-    ?>
-    
-    <!--- Tabla de consultas -->
-    <br>
-    <table>
-        <thead>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Categoria</th>
-            <th>Marca</th>
-            <th>Proveedor</th>
-        </thead>
-        <tbody>
-            <?php $producto->consultar(); ?>
-        </tbody>
-    </table>
+    <div class="container">
+        <?php 
+            require "../clases/producto.php";
+            $producto = new Producto();
+        ?>
+        <h1>Listado de productos</h1>
+        <a href="registrar_producto.php">Registrar Producto</a>
+        <!--- Tabla de consultas -->
+        <br>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th colspan="2">Acciones</th>
+            </thead>
+            <tbody>
+                <?php $producto->consultar(); ?>
+            </tbody>
+        </table>
+        <?php $producto->totalProductos(); ?>
+    </div>
 </body>
 </html>
