@@ -20,11 +20,11 @@
             <h1>Iniciar Sesión</h1>
             <div class="contenedor">
                 <div class="input-contenedor">
-                    <i class="fa-solid fa-user" class="icono"></i>
+                    <i class="fa-solid fa-user icono" ></i>
                     <input type="text" name="email" placeholder="Correo Electrónico">
                 </div>
                 <div class="input-contenedor">
-                    <i class="fa-solid fa-key" class="icono"></i>
+                    <i class="fa-solid fa-key icono" ></i>
                     <input type="password" name="password" placeholder="Contraseña">
                 </div>
                 <input type="submit" name="ingresar" value="Ingresar" class="btn">

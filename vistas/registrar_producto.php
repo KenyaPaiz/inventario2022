@@ -20,7 +20,7 @@
         <input type="text" name="nombre" placeholder="Nombre del producto...">
 
         <label for="descripcion">Descripción</label>
-        <textarea type="text" name="descripcion" placeholder="Descripción..."></textarea>
+        <input type="text" name="descripcion" placeholder="Descripción...">
 
         <label for="precio">Precio</label>
         <input type="number" name="precio" placeholder="Precio...">
@@ -45,6 +45,7 @@
 
         <input type="submit" name="registrar" value="Registrar Producto">
     </form>
+    <a href="ver_producto.php">Ver productos</a>
     <?php $producto->registrar(); ?>
     
 </body>

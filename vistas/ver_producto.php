@@ -11,6 +11,7 @@
         require "../clases/producto.php";
         $producto = new Producto();
     ?>
+    
     <!--- Tabla de consultas -->
     <br>
     <table>

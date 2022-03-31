@@ -11,7 +11,7 @@
         require('../clases/proveedor.php');
         $proveedor = new Proveedor(); 
     ?>
-    <h1>Actualizar Marca</h1>
+    <h1>Actualizar Proveedor</h1>
     <form method="POST">
         <?php $proveedor->obtenerId(); ?>
         <input type="submit" name="actualizar" value="Actualizar Proveedor">

@@ -64,7 +64,7 @@
                                 VALUES ('$this->nombre', '$this->descripcion','$this->precio',$this->cantidad,$this->idCategoria,$this->idMarca,$this->idProveedor,$this->idEstado)";
                     $resultado = mysqli_query($this->con,$query);
                     if(!empty($resultado)){
-                        echo "Se agrego";
+                        header("location:ver_producto.php");
                     }
                 }
             }
@@ -84,8 +84,8 @@
                     $tabla .= "<td>".$imprimir['categoria']."</td>";
                     $tabla .= "<td>".$imprimir['marca']."</td>";
                     $tabla .= "<td>".$imprimir['proveedor']."</td>";
-                    $tabla .= "<form action='ver_proveedor.php' method='POST'>";
-                        $tabla .= "<td><button type='submit' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<form action='actualizar_producto.php' method='POST'>";
+                        $tabla .= "<td><button type='submit' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
                     $tabla .= "</form>";
                 $tabla .= "</tr>";
                 echo $tabla;
@@ -95,20 +95,17 @@
         public function obtenerId(){
             //esta es la para conexion de base de datos
             $this->conectar();
-            if(isset($_POST['idproveedor'])){
-                $this->id = $_POST['idproveedor'];
+            if(isset($_POST['idproducto'])){
+                $this->id = $_POST['idproducto'];
                 $query = "SELECT * FROM producto WHERE id=$this->id";
                 $resultado = mysqli_query($this->con, $query);
                 while($imprimir = mysqli_fetch_array($resultado)){
                     $form = "<label>Nombre: </label>";
                     $form .= "<input type='hidden' name='id' value='".$imprimir['id']."'>";
                     $form .= "<input type='text' name='nombre' value='".$imprimir['nombre']."'>";
-                    $form .= "<input type='text' name='direccion' value='".$imprimir['descripcion']."'>";
-                    $form .= "<input type='text' name='telefono' value='".$imprimir['precio']."'>";
-                    $form .= "<input type='text' name='telefono' value='".$imprimir['cantidad']."'>";
-                    $form .= "<input type='text' name='telefono' value='".$imprimir['categoria']."'>";
-                    $form .= "<input type='text' name='telefono' value='".$imprimir['telefono']."'>";
-                    $form .= "<input type='text' name='telefono' value='".$imprimir['telefono']."'>";
+                    $form .= "<input type='text' name='descripcion' value='".$imprimir['descripcion']."'>";
+                    $form .= "<input type='number' name='precio' value='".$imprimir['precio']."'>";
+                    $form .= "<input type='text' name='cantidad' value='".$imprimir['cantidad']."'>";        
                     echo $form;
                 }
             }
@@ -120,12 +117,17 @@
                 if(isset($_POST['actualizar'])){
                     $this->id = $_POST['id'];
                     $this->nombre = $_POST['nombre'];
-                    $this->direccion = $_POST['direccion'];
-                    $this->telefono = $_POST['telefono'];
-                    $query = "UPDATE proveedor SET nombre='$this->nombre', direccion='$this->direccion', telefono='$this->telefono' WHERE id=$this->id";
+                    $this->descripcion = $_POST['descripcion'];
+                    $this->precio = $_POST['precio'];
+                    $this->idCategoria = $_POST['categoria'];
+                    $this->idMarca = $_POST['marca'];
+                    $this->idProveedor = $_POST['proveedor'];
+                    $this->cantidad = $_POST['cantidad'];
+                    // $this->idEstado = 1;
+                    $query = "UPDATE producto SET nombre='$this->nombre', descripcion='$this->descripcion', precio='$this->precio', cantidad='$this->cantidad', idcategoria=$this->idCategoria, idmarca=$this->idMarca, idproveedor=$this->idProveedor WHERE id=$this->id";         
                     $resultado = mysqli_query($this->con, $query);
                     if(!empty($resultado)){
-                        header("location:proveedor.php");
+                        header("location:ver_producto.php");
                     }
                     else{
                         echo "Error al actualizar la marca";
