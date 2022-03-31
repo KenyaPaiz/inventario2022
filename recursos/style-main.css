@@ -12,30 +12,48 @@ body
     box-sizing: border-box;
 }
 
-.imagen
-{
-    padding-top: 10px;
-    margin-top: 10px;
-}
-.contenedor
-{
-    width: 100%;
-    padding: 15px;
-}
-
 .formulario
 {
+    
     background: #fff;
     margin-top: 4%;
     padding: 3px;
     width: 50%;
     border-radius: 5px;
+    margin:0 auto;
+    float: none;
+}
+
+.imagen
+{
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: 45%;
+
 }
 
 h1{
     text-align: center;
     color: #1a2537;
     font-size: 40px;
+}
+
+
+.contenedor
+{
+    width: 100%;
+    padding: 15px;
+    margin:0 auto;
+    float: none;
+}
+
+.icon
+{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+    margin-left: 50%;
+
 }
 
 input[type="text"],
@@ -45,6 +63,7 @@ input[type="password"]
     width: 82%;
     padding: 10px;
     border: none;
+    margin-left: 40px;
 }
 
 .input-contenedor
@@ -52,14 +71,10 @@ input[type="password"]
     margin-bottom: 15px;
     border: 1px solid #aaa;
     border-radius: 5px;
+    padding-left: 10px;
 }
 
-.icon
-{
-    min-width: 50px;
-    text-align: center;
-    color: #999;
-}
+
 
 .btn
 {
