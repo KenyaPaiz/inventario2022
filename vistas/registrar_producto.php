@@ -17,34 +17,34 @@
         <h1>Registrar Producto</h1>
 
         <label for="producto_nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre del producto...">
+        <input type="text" name="nombre" placeholder="Nombre del producto..."><br>
 
         <label for="descripcion">Descripción</label>
-        <textarea type="text" name="descripcion" placeholder="Descripción..."></textarea>
+        <textarea type="text" name="descripcion" placeholder="Descripción..."></textarea><br>
 
         <label for="precio">Precio</label>
-        <input type="number" name="precio" placeholder="Precio...">
+        <input type="number" name="precio" placeholder="Precio..."><br>
 
         <label for="categoria">Categoria</label>
         <select name="categoria">
             <?php $producto->selectCategoria();?>
-        </select>
+        </select><br>
 
         <label for="marca">Marca</label>
         <select name="marca">
             <?php $producto->selectMarcas(); ?>
-        </select>
+        </select><br>
 
         <label for="proveedor">Proveedor</label>
         <select name="proveedor">
             <?php $producto->selectProveedor(); ?>
-        </select>
+        </select><br><br>
 
-        <label for="cantidad">Cantidad</label>
-        <input type="number" name="cantidad" placeholder="Cantidad..."><br>
+        <label for="">Existencias</label>
+        <input type="number" name="existencias"><br>
 
-        <label for="">Imagen</label>
-        <input type="file" name="imagen" ><br>
+        <!--<label for="">Imagen</label>
+        <input type="file" name="imagen" ><br>-->
 
         <input type="submit" name="registrar" value="Registrar Producto">
     </form>

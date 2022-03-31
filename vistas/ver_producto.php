@@ -19,7 +19,6 @@
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Precio</th>
-            <th>Cantidad</th>
             <th>Categoria</th>
             <th>Marca</th>
             <th>Proveedor</th>
