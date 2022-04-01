@@ -25,16 +25,24 @@
             $producto = new Producto();
         ?>
         <h1>Listado de productos</h1>
-        <a href="registrar_producto.php">Registrar Producto</a>
+        <a href="registrar_producto.php">Registrar Producto</a><br>
+        <form action="" method="post">
+            <b>Busqueda: </b>
+            <input type="text" name="busqueda" >
+            <input type="submit" name="buscar" value="Buscar">
+        </form>
         <!--- Tabla de consultas -->
         <br>
         <table>
             <thead>
-                <th>ID</th>
+                <th>#</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
+                <th>Proveedor</th>
+                <th>Marca</th>
+                <th>Categoria</th>
                 <th colspan="2">Acciones</th>
             </thead>
             <tbody>

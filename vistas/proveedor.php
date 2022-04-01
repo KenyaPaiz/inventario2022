@@ -38,7 +38,7 @@
         <br>
         <table>
             <thead>
-                <th>ID</th>
+                <th>#</th>
                 <th>Nombre</th>
                 <th>Direccion</th>
                 <th>Telefono</th>

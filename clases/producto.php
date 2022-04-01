@@ -10,7 +10,6 @@
         public $idProveedor;
         public $idEstado;
         public $cantidad;
-        //public $img;
 
         //Para llenar un select con marcas
         public function selectMarcas(){
@@ -89,13 +88,17 @@
             //Ver todo los productos con estado activo
             $query = "SELECT p.id, p.nombre, p.descripcion, p.precio, p.cantidad, c.nombre AS categoria, m.nombre AS marca, pv.nombre AS proveedor FROM producto AS p INNER JOIN categoria AS c ON p.idcategoria=c.id INNER JOIN marca AS m ON p.idmarca=m.id INNER JOIN proveedor AS pv ON p.idproveedor=pv.id WHERE p.idestado=1 ORDER BY p.id ASC";
             $resultado = mysqli_query($this->con, $query);
+            $cont = 1;
             while($imprimir = mysqli_fetch_array($resultado)){
                 $tabla = "<tr>";
-                    $tabla .= "<td>".$imprimir['id']. "</td>";
+                    $tabla .= "<td>".$cont."</td>";
                     $tabla .= "<td>".$imprimir['nombre']. "</td>";
                     $tabla .= "<td>".$imprimir['descripcion']. "</td>";
-                    $tabla .= "<td> $ ".$imprimir['precio']. "</td>";
+                    $tabla .= "<td> $".$imprimir['precio']. "</td>";
                     $tabla .= "<td>".$imprimir['cantidad']. "</td>";
+                    $tabla .= "<td>".$imprimir['proveedor']. "</td>";
+                    $tabla .= "<td>".$imprimir['marca']. "</td>";
+                    $tabla .= "<td>".$imprimir['categoria']. "</td>";
                     $tabla .= "<form action='actualizar_producto.php' method='POST'>";
                         $tabla .= "<td><button type='submit' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
                     $tabla .= "</form>";
@@ -104,6 +107,7 @@
                     $tabla .= "</form>";
                 $tabla .= "</tr>";
                 echo $tabla;
+                $cont++;
             } 
         }
 
@@ -170,7 +174,7 @@
                 $resultado = mysqli_query($this->con, $query);
                 while($imprimir = mysqli_fetch_array($resultado)){
                     $form = "<input type='hidden' name='idproducto' value='".$imprimir['id']."'>";
-                    $form = "<b>Nombre del producto: </b>". $imprimir['producto']."<br>";
+                    $form .= "<b>Nombre del producto: </b>". $imprimir['producto']."<br>";
                     $form .= "<b>Estado: </b>". $imprimir['estado']."<br>";
                     echo $form;
                 }
@@ -184,14 +188,26 @@
                 if(isset($_POST['cambiarEstado'])){
                     $this->id = $_POST['idproducto'];
                     $this->idEstado = $_POST['estado'];
-                    $query = "UPDATE producto SET idestado WHERE id=$this->id";         
+                    $query = "UPDATE producto SET idestado=$this->idEstado WHERE id=$this->id";         
                     $resultado = mysqli_query($this->con, $query);
                     if(!empty($resultado)){
                         header("location:ver_producto.php");
                     }
                     else{
-                        echo "Error al actualizar la marca";
+                        echo "Error al actualizar el estado";
                     }
+                }
+            }
+        }
+
+        public function busqueda(){
+            $this->conectar();
+            if(isset($_POST['busqueda'])){
+                if(isset($_POST['buscar'])){
+                    $buscar = $_POST['busqueda'];
+                    $query = "select * from producto WHERE nombre LIKE '%$buscar%'";
+                    $resultado = mysqli_query($this->con, $query);
+                    
                 }
             }
         }

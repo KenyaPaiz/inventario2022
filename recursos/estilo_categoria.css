@@ -1,0 +1,13 @@
+body{
+    background: url(fondo.categoria.jpg);
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    margin: auto;
+    padding: 200px;
+    background-color: black;
+}

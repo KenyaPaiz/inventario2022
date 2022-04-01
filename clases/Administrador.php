@@ -15,7 +15,7 @@
                     //mysqli_num_rows = cuenta las filas del select
                     $contador = mysqli_num_rows($resultado);
                     if($contador > 0){
-                        header("location:inicio.php");
+                        header("location:menu.php");
                     }else{
                         echo "Correo y contraseña incorrectas";
                     }

@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- CSS only -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <title>Actualizar Producto</title>
+     <link rel="stylesheet" href="../recursos/style-act-producto.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+    <center>
     <div class="container">
         <?php 
             require('../clases/producto.php');
@@ -28,10 +31,11 @@
             <select name="proveedor">
                 <?php $producto->selectProveedor(); ?>
             </select><br><br>
-            <input type="submit" name="actualizar" value="Actualizar Producto">
+            <input type="submit" name="actualizar" class="btn btn-dark" value="Actualizar Producto">
         </form>
         <?php $producto->actualizar(); ?>
     </div>
+</center>
 </body>
 </html>
 

@@ -24,8 +24,8 @@
         $proveedor = new Proveedor(); 
     ?>
     <h1>Actualizar Proveedor</h1>
-
-        <?php $proveedor->obtenerId(); ?>
+        <form method="POST">
+            <?php $proveedor->obtenerId(); ?>
             <div class="input-contenedor">
                 <input type="submit" name="actualizar" value="Actualizar Proveedor" class="button">
             </div>
