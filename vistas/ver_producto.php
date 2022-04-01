@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav>
+            <a href="../menu.php">Menu</a>
             <a href="categoria.php">Categoria</a>
             <a href="marca.php">Marca</a>
             <a href="ver_producto.php">Producto</a>
