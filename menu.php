@@ -7,7 +7,7 @@
     <link rel="icon" href="recursos/logo-carrito.png">
     <link rel="stylesheet" href="recursos/style-menu.css">
     <script src="https://kit.fontawesome.com/36d396a1fc.js" crossorigin="anonymous"></script>
-    <title>Seleciona acción a realizar</title>
+    <title>Menú</title>
 </head>
 <body>
     <main>
@@ -15,7 +15,7 @@
        <div class=formulario>
         <form action="vistas/Categoria.php" method="POST">
                 <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
-                <h1>¿Qué deseas hacer?</h1>
+                <h1>¿Qué desea hacer?</h1>
                 <div class="input-contenedor">
                     <i class="fa-solid fa-layer-group" class="icon"></i>
                     <input type="submit" name="categoria" value="Ver Categoria" class="button">
