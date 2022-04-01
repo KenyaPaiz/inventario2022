@@ -32,6 +32,7 @@
             <input type="text" name="busqueda" >
             <input type="submit" name="buscar" value="Buscar">
         </form>
+        <?php $producto->busqueda(); ?>
         <!--- Tabla de consultas -->
         <br>
         <table>

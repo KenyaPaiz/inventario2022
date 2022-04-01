@@ -207,7 +207,10 @@
                     $buscar = $_POST['busqueda'];
                     $query = "select * from producto WHERE nombre LIKE '%$buscar%'";
                     $resultado = mysqli_query($this->con, $query);
-                    
+                    while($imp = mysqli_fetch_array($resultado)){
+                        echo $imp['nombre']."<br>";
+                    }
+
                 }
             }
         }
