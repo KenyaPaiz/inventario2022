@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="recursos/logo-carrito.png">
-    <link rel="stylesheet" href="recursos/style-inicio.css">
+    <link rel="stylesheet" href="recursos/style-menu.css">
     <script src="https://kit.fontawesome.com/36d396a1fc.js" crossorigin="anonymous"></script>
     <title>Seleciona acción a realizar</title>
 </head>
