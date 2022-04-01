@@ -13,7 +13,8 @@
 <?php 
     require "clases/Administrador.php";
     $admin = new Administrador();
- ?> 
+ ?>
+ <center>
 <main>
         <form action="" class="formulario" method="POST">
             <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "70">
@@ -30,9 +31,11 @@
                 <input type="submit" name="ingresar" value="Ingresar" class="btn">
                 <p>Al registrarte, aceptas nuestras Políticas y Condiciones.</p>
                 <p>¿Aún no tienes cuenta? <a class="link" href="registrarse.php">Regístrate</a></p>
+                <?php $admin->accederAdministrador(); ?>
             </div>
         </form>
-        <?php $admin->accederAdministrador(); ?>
+        
 </main>
+</center>
 </body>
 </html>
