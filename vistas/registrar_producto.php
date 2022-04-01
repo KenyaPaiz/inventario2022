@@ -24,7 +24,7 @@
             <input type="text" name="descripcion" placeholder="descripcion"><br>
 
             <label for="precio">Precio:</label>
-            <input type="number" name="precio" placeholder="Precio..."><br>
+            <input type="text" name="precio" placeholder="Precio..."><br>
 
             <label for="categoria">Categoria:</label>
             <select name="categoria">
