@@ -14,7 +14,6 @@
             require('../clases/proveedor.php');
             $proveedor = new Proveedor();
         ?>
-        <h1>Registro de Proveedores</h1>
         <form action="" method="POST">
             <h2>Registrar Proveedor</h2>
             <label for=""><b>Nombre:</b></label>
