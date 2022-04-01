@@ -16,13 +16,25 @@
  ?>
  <center>
 <main>
-        <form action="" class="formulario" method="POST">
-            <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "70">
-            <h1>Iniciar Sesión</h1>
-            <div class="contenedor">
-                <div class="input-contenedor">
-                    <i class="fa-solid fa-user icono" class="icon"></i>
-                        <input type="text" name="email" placeholder="Correo Electrónico">
+        <div class="form_container">
+            <form action="" class="formulario" method="POST">
+                <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "70">
+                <h1>Iniciar Sesión</h1>
+                <div class="contenedor">
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-user icono" class="icon"></i>
+                            <input type="text" name="email" placeholder="Correo Electrónico">
+                    </div>
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-key icono" class="icon"></i>
+                            <input type="password" name="password" placeholder="Contraseña">
+                    </div>
+                    <input type="submit" name="ingresar" value="Ingresar" class="btn">
+
+                    <div class="parrafo">
+                        <p>Al registrarte, aceptas nuestras Políticas y Condiciones.</p>
+                        <p>¿Aún no tienes cuenta? <a class="link" href="registrarse.php">Regístrate</a></p>
+                    </div>
                 </div>
                 <div class="input-contenedor">
                     <i class="fa-solid fa-key icono" class="icon"></i>

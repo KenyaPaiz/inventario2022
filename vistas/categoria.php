@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="../recursos/estilo.categoria.css">
     <title>Categoria</title>
 </head>
-<body><br>
-    <main class="container">
+<body>
+    <header>
+        <nav>
+            <a href="../menu.php">Menu</a>
+            <a href="categoria.php">Categoria</a>
+            <a href="marca.php">Marca</a>
+            <a href="ver_producto.php">Producto</a>
+            <a href="proveedor.php">Proveedor</a>
+            <a href="registrar_producto.php">Registrar producto</a>
+        </nav>
+    </header>
+    <div class="container">
         <?php
             require('../clases/Categoria.php');
             $categoria = new Categoria();
