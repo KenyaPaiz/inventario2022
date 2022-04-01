@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="recursos/logo-carrito.png">
-    <link rel="stylesheet" href="recursos/style-menu.css">
+    <link rel="icon" href="recursos/img/logo-carrito.png">
+    <link rel="stylesheet" href="recursos/css/style-menu.css">
     <script src="https://kit.fontawesome.com/36d396a1fc.js" crossorigin="anonymous"></script>
     <title>Menú</title>
 </head>
@@ -14,7 +14,7 @@
         <!--IMPUT CATEGORÍA-->
        <div class=formulario>
         <form action="vistas/Categoria.php" method="POST">
-                <img class="imagen" src="recursos/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
+                <img class="imagen" src="recursos/img/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
                 <h1>¿Qué desea hacer?</h1>
                 <div class="input-contenedor">
                     <i class="fa-solid fa-layer-group" class="icon"></i>
