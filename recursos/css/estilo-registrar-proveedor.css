@@ -26,11 +26,18 @@ h2
 .btn-div
 {
     padding: 12px;
+    margin-top: 14px;
+    margin-bottom: 19px;
 }
 
-.btn-registrar
+#btn-registrar
 {
-    padding: 5px;
+    padding: 10px;
+}
+
+#btn-registrar:hover
+{
+    color: aqua;
 }
 
 #btn-act
