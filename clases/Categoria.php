@@ -29,10 +29,10 @@
                 $tabla .= "<td>".$imprimir['id']."</td>";
                 $tabla .= "<td>".$imprimir['nombre']."</td>";
                 $tabla .= "<form action='ver_categoria.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' name='id' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<td><button type='submit' class='btn btn-outline-success' name='id' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
                 $tabla .= "<form  method='POST'>";
-                    $tabla .= "<td><button type='submit' name='delete_id' value='".$imprimir['id']."'>Eliminar</button></td>";
+                    $tabla .= "<td class='td-cat'><button type='submit' class='btn btn-outline-danger' name='delete_id' value='".$imprimir['id']."'>Eliminar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
