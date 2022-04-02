@@ -6,17 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../recursos/css/estilo-nav.css">
     <title>Producto</title>
 </head>
 <body>
-    <header>
+    <header class="encabezado">
         <nav>
-            <a href="../menu.php">Menu</a>
-            <a href="categoria.php">Categoria</a>
-            <a href="marca.php">Marca</a>
-            <a href="ver_producto.php">Producto</a>
-            <a href="proveedor.php">Proveedor</a>
-            <a href="registrar_producto.php">Registrar producto</a>
+
+                <div class="div-nav">
+                    <a class="nav" href="../menu.php">Menu</a>
+                </div>
+
+                <div class="div-nav">
+                    <a class="nav" href="categoria.php">Categoria</a>
+                </div>
+
+                <div class="div-nav">
+                    <a class="nav" href="marca.php">Marca</a>
+                </div>
+
+                <div class="div-nav">
+                    <a class="nav" href="ver_producto.php">Producto</a>
+                </div>
+
+                <div class="div-nav">
+                    <a class="nav" href="proveedor.php">Proveedor</a>
+                </div>
+
+                <div class="div-nav">
+                    <a class="nav" href="registrar_producto.php">Registrar producto</a>
+                </div>
+            
         </nav>
     </header>
     <div class="container">
