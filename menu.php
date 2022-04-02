@@ -29,7 +29,7 @@
                 </div>
             </form>
             <!--IMPUT PROVEEDOR-->
-            <form action="vistas/proveedor.php" method="POST">
+            <form action="vistas/ver_proveedor.php" method="POST">
                 <div class="input-contenedor">
                     <i class="fa-solid fa-address-book" class="icon"></i>
                     <input type="submit" name="proveedor" value="Ver Proveedor" class="button">

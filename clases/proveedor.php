@@ -18,7 +18,7 @@ class Proveedor extends Conexion{
                             VALUES ('$this->nombre','$this->direccion','$this->telefono')";
                 $resultado = mysqli_query($this->con,$query);
                 if(!empty($resultado)){
-                    echo "Se agregó";
+                    echo "<p class='msj-ok'>¡Se agregó!</p>";
                 }
             }
         }
@@ -35,7 +35,7 @@ class Proveedor extends Conexion{
                 $tabla .= "<td>".$imprimir['direccion']."</td>";
                 $tabla .= "<td>".$imprimir['telefono']."</td>";
                 $tabla .= "<form action='ver_proveedor.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
