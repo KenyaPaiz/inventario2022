@@ -19,7 +19,6 @@
             <a href="registrar_producto.php">Registrar producto</a>
         </nav>
     </header>
-    </header>
     <div class="container">
         <?php 
             require "../clases/producto.php";
@@ -32,7 +31,6 @@
             <input type="text" name="busqueda" >
             <input type="submit" name="buscar" value="Buscar">
         </form>
-        <?php $producto->busqueda(); ?>
         <!--- Tabla de consultas -->
         <br>
         <table>
@@ -48,7 +46,14 @@
                 <th colspan="2">Acciones</th>
             </thead>
             <tbody>
-                <?php $producto->consultar(); ?>
+                <?php
+                    if(isset($_POST['buscar'])){
+                        $producto->busqueda();
+                    }
+                    else{
+                        $producto->consultar();
+                    }
+                ?>
             </tbody>
         </table>
         <?php $producto->totalProductos(); ?>

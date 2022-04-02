@@ -43,6 +43,7 @@
                 <?php $categoria->consultar(); ?>
             </tbody>
         </table>
+        <?php $categoria->eliminar(); ?>
     </main>
 </body>
 </html>

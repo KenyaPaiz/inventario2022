@@ -11,7 +11,7 @@
         public $idEstado;
         public $cantidad;
 
-        //Para llenar un select con marcas
+        //Obteniendo todas las marcas para el registro del producto
         public function selectMarcas(){
             $this->conectar();
             $query = "SELECT * FROM marca";
@@ -24,6 +24,7 @@
             }
         }
 
+        //Obteniendo todas las categorias para el registro del producto
         public function selectCategoria(){
             $this->conectar();
             $query = "SELECT * FROM categoria";
@@ -36,6 +37,7 @@
             }
         }
 
+        //Obteniendo todas los proveedores para el registro del producto
         public function selectProveedor(){
             $this->conectar();
             $query = "SELECT * FROM proveedor";
@@ -48,6 +50,7 @@
             }
         }
 
+        //Obteniendo los estados para actualizar el producto
         public function selectEstado(){
             $this->conectar();
             $query = "SELECT * FROM estado";
@@ -111,8 +114,8 @@
             } 
         }
 
+        //Obteniendo el Id del producto seleccionado de la tabla
         public function obtenerId(){
-            //esta es la para conexion de base de datos
             $this->conectar();
             if(isset($_POST['idproducto'])){
                 $this->id = $_POST['idproducto'];
@@ -145,7 +148,6 @@
                     $this->idMarca = $_POST['marca'];
                     $this->idProveedor = $_POST['proveedor'];
                     $this->cantidad = $_POST['cantidad'];
-                    // $this->idEstado = 1;
                     $query = "UPDATE producto SET nombre='$this->nombre', descripcion='$this->descripcion', precio='$this->precio', cantidad='$this->cantidad', idcategoria=$this->idCategoria, idmarca=$this->idMarca, idproveedor=$this->idProveedor WHERE id=$this->id";         
                     $resultado = mysqli_query($this->con, $query);
                     if(!empty($resultado)){
@@ -158,6 +160,7 @@
             }
         }
 
+        //Sumando todas las existencias de los productos con estado activo
         public function totalProductos(){
             $this->conectar();
             $query = "SELECT SUM(cantidad) AS total FROM producto WHERE idestado=1";
@@ -166,6 +169,7 @@
             echo "<b>Total de productos: </b>" . $total['total'];
         }
 
+        //Obteniendo el estado del producto
         public function obtenerEstado(){
             $this->conectar();
             if(isset($_POST['idestado'])){
@@ -182,6 +186,7 @@
             }
         }
 
+        //Actualizando el estado del producto
         public function cambiarEstado(){
             $this->conectar();
             if(isset($_POST['idproducto'])){
@@ -200,17 +205,36 @@
             }
         }
 
+        //Busqueda de filtro por nombre del producto
         public function busqueda(){
             $this->conectar();
             if(isset($_POST['busqueda'])){
                 if(isset($_POST['buscar'])){
                     $buscar = $_POST['busqueda'];
-                    $query = "select * from producto WHERE nombre LIKE '%$buscar%'";
+                    //Ver todo los productos con estado activo
+                    $query = "SELECT p.id, p.nombre, p.descripcion, p.precio, p.cantidad, c.nombre AS categoria, m.nombre AS marca, pv.nombre AS proveedor FROM producto AS p INNER JOIN categoria AS c ON p.idcategoria=c.id INNER JOIN marca AS m ON p.idmarca=m.id INNER JOIN proveedor AS pv ON p.idproveedor=pv.id WHERE p.idestado=1 AND p.nombre LIKE '%$buscar%' ORDER BY p.id ASC";
                     $resultado = mysqli_query($this->con, $query);
-                    while($imp = mysqli_fetch_array($resultado)){
-                        echo $imp['nombre']."<br>";
-                    }
-
+                    $cont = 1;
+                    while($imprimir = mysqli_fetch_array($resultado)){
+                        $tabla = "<tr>";
+                            $tabla .= "<td>".$cont."</td>";
+                            $tabla .= "<td>".$imprimir['nombre']. "</td>";
+                            $tabla .= "<td>".$imprimir['descripcion']. "</td>";
+                            $tabla .= "<td> $".$imprimir['precio']. "</td>";
+                            $tabla .= "<td>".$imprimir['cantidad']. "</td>";
+                            $tabla .= "<td>".$imprimir['proveedor']. "</td>";
+                            $tabla .= "<td>".$imprimir['marca']. "</td>";
+                            $tabla .= "<td>".$imprimir['categoria']. "</td>";
+                            $tabla .= "<form action='actualizar_producto.php' method='POST'>";
+                                $tabla .= "<td><button type='submit' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
+                            $tabla .= "</form>";
+                            $tabla .= "<form action='estado_producto.php' method='POST'>";
+                                $tabla .= "<td><button type='submit' name='idestado' value='".$imprimir['id']."'>Estado</button></td>";
+                            $tabla .= "</form>";
+                        $tabla .= "</tr>";
+                        echo $tabla;
+                        $cont++;
+                    } 
                 }
             }
         }

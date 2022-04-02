@@ -31,6 +31,9 @@
                 $tabla .= "<form action='ver_categoria.php' method='POST'>";
                     $tabla .= "<td><button type='submit' name='id' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
+                $tabla .= "<form  method='POST'>";
+                    $tabla .= "<td><button type='submit' name='delete_id' value='".$imprimir['id']."'>Eliminar</button></td>";
+                $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
          }
@@ -65,6 +68,18 @@
                 else{
                     echo "Error al actualizar categoría";
                 }
+            }
+        }
+    }
+
+    public function eliminar(){
+        $this->conectar();
+        if(isset($_POST['delete_id'])){
+            $this->id = $_POST['delete_id'];
+            $query= "DELETE FROM categoria WHERE id=$this->id";
+            $resultado = mysqli_query($this->con, $query);
+            if(!empty($resultado)){
+                header("location:categoria.php");
             }
         }
     }
