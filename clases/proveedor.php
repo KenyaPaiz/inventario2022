@@ -35,7 +35,7 @@ class Proveedor extends Conexion{
                 $tabla .= "<td>".$imprimir['direccion']."</td>";
                 $tabla .= "<td>".$imprimir['telefono']."</td>";
                 $tabla .= "<form action='act_proveedor.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-outline-success' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
