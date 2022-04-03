@@ -1,6 +1,6 @@
 <?php
 require('conexion.php');
-//Responsabilidad unica
+//Respons0abilidad unica
 class Proveedor extends Conexion{
     public $id;
     public $nombre;
@@ -34,12 +34,13 @@ class Proveedor extends Conexion{
                 $tabla .= "<td>".$imprimir['nombre']."</td>";
                 $tabla .= "<td>".$imprimir['direccion']."</td>";
                 $tabla .= "<td>".$imprimir['telefono']."</td>";
-                $tabla .= "<form action='ver_proveedor.php' method='POST'>";
+                $tabla .= "<form action='act_proveedor.php' method='POST'>";
                     $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
         } 
+    
     }
 
     public function obtenerId(){
@@ -78,7 +79,6 @@ class Proveedor extends Conexion{
                 }
             }
         }
-    }
-    
+    }  
 }
 ?>

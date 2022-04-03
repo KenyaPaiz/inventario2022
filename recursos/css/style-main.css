@@ -8,7 +8,11 @@ html {
 body
 {
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
     background: url(../img/fondo.jpg);
+=======
+    background: url(/recursos/img/fondo.jpg);
+>>>>>>> a83219061ab46854de6b99a8ddf615fe26a096bf
     background-size: cover;
     background-attachment: fixed;
 }

@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../recursos/css/estilo-registrar-proveedor.css">
     <link rel="stylesheet" href="../recursos/css/estilo-nav.css">
+<<<<<<< HEAD:vistas/ver_proveedor.php
     <title>Ver Proveedor</title>
+=======
+    <title>Proveedor</title>
+>>>>>>> a83219061ab46854de6b99a8ddf615fe26a096bf:vistas/proveedor.php
 </head>
 <body>
     <header class="encabezado">
@@ -40,53 +43,36 @@
             
         </nav>
     </header>
-<center>
     <div class="container">
         <?php
             require('../clases/proveedor.php');
             $proveedor = new Proveedor();
         ?>
+        <h1>Registro de Proveedores</h1>
         <form action="" method="POST">
-
-            <h2>Registrar Proveedor</h2>
-
-            <div class="form">
-                <label for=""><b>Nombre:</b></label>
-                <input type="text" class="barras" name="nombre" placeholder="Nombre del Proveedor"><br>
-            </div>
-
-            <div class="form">
-                <label for=""><b>Direccion:</b></label>
-                <input type="text" class="barras" name="direccion" placeholder="Direccion del Proveedor"><br>
-            </div>
-
-            <div class="form">
-                <label for=""><b>Telefono:</b></label>
-                <input type="text" class="barras" name="telefono" placeholder="Telefono del Proveedor"><br>
-            </div>
-
-            <div class="btn-div">
-                <input type="submit" name="registrar" id="btn-registrar" class="btn btn-dark" value="Registrar proveedor">
-            </div>
-
+            <label for=""><b>Nombre:</b></label>
+            <input type="text" name="nombre" placeholder="Digite su nombre">
+            <label for=""><b>Direccion:</b></label>
+            <input type="text" name="direccion" placeholder="Digite su direccion">
+            <label for=""><b>Telefono:</b></label>
+            <input type="text" name="telefono" placeholder="Digite su telefono">
+            <input type="submit" name="registrar" value="Registrar Proveedor">
         </form>
         <?php $proveedor->registrar(); ?>
+        <!--- Tabla de consultas -->
         <br>
-        <div class="tabla-contenedor">
-            <table id="tabla" class="table table-sm">
-                <thead>
-                    <th class="th">#</th>
-                    <th class="th">Nombre</th>
-                    <th class="th">Direccion</th>
-                    <th class="th">Telefono</th>
-                    <th class="th">Accion</th>
-                </thead>
-                <tbody>
-                    <?php $proveedor->consultar(); ?>
-                </tbody>
-            </table>
-        </div>
+        <table>
+            <thead>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Accion</th>
+            </thead>
+            <tbody>
+                <?php $proveedor->consultar(); ?>
+            </tbody>
+        </table>
     </div>
-</center>
 </body>
 </html>

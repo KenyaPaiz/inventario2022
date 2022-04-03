@@ -13,6 +13,7 @@
     <main>
         <!--IMPUT CATEGORÍA-->
        <div class=formulario>
+<<<<<<< HEAD
             <form action="vistas/Categoria.php" method="POST" >
                     <img class="imagen" src="recursos/img/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
                     <h1>¿Qué desea hacer?</h1>
@@ -43,6 +44,38 @@
                     </div>
                 </form>
         </div>
+=======
+        <form action="vistas/Categoria.php" method="POST">
+                <img class="imagen" src="recursos/img/logo-carrito.png" alt="Logo TienditaShop" width = "60" height = "60">
+                <h1>¿Qué desea hacer?</h1>
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-layer-group" class="icon"></i>
+                    <input type="submit" name="categoria" value="Ver Categoria" class="button">
+                </div>
+            </form>
+            <!--IMPUT MARCA-->
+            <form action="vistas/Marca.php" method="POST">
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-splotch" class="icon"></i>
+                    <input type="submit" name="marca" value="Ver Marcas" class="button">
+                </div>
+            </form>
+            <!--IMPUT PROVEEDOR-->
+            <form action="vistas/proveedor.php" method="POST">
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-address-book" class="icon"></i>
+                    <input type="submit" name="proveedor" value="Ver Proveedor" class="button">
+                </div>
+            </form>
+            <!--IMPUT PRODUCTO-->
+            <form action="vistas/ver_producto.php" method="POST">
+                <div class="input-contenedor">
+                <i class="fa-solid fa-basket-shopping" class="icon"></i>
+                    <input type="submit" name="producto" value="Ver Productos" class="button">
+                </div>
+            </form>
+       </div>
+>>>>>>> a83219061ab46854de6b99a8ddf615fe26a096bf
     </main>
 </body>
 </html>
