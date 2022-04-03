@@ -103,10 +103,10 @@
                     $tabla .= "<td>".$imprimir['marca']. "</td>";
                     $tabla .= "<td>".$imprimir['categoria']. "</td>";
                     $tabla .= "<form action='actualizar_producto.php' method='POST'>";
-                        $tabla .= "<td><button type='submit' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
+                        $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
                     $tabla .= "</form>";
                     $tabla .= "<form action='estado_producto.php' method='POST'>";
-                        $tabla .= "<td><button type='submit' name='idestado' value='".$imprimir['id']."'>Estado</button></td>";
+                        $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idestado' value='".$imprimir['id']."'>Estado</button></td>";
                     $tabla .= "</form>";
                 $tabla .= "</tr>";
                 echo $tabla;
@@ -226,10 +226,10 @@
                             $tabla .= "<td>".$imprimir['marca']. "</td>";
                             $tabla .= "<td>".$imprimir['categoria']. "</td>";
                             $tabla .= "<form action='actualizar_producto.php' method='POST'>";
-                                $tabla .= "<td><button type='submit' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
+                                $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproducto' value='".$imprimir['id']."'>Actualizar</button></td>";
                             $tabla .= "</form>";
                             $tabla .= "<form action='estado_producto.php' method='POST'>";
-                                $tabla .= "<td><button type='submit' name='idestado' value='".$imprimir['id']."'>Estado</button></td>";
+                                $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idestado' value='".$imprimir['id']."'>Estado</button></td>";
                             $tabla .= "</form>";
                         $tabla .= "</tr>";
                         echo $tabla;

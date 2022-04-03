@@ -1,8 +1,16 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
 body
 {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: url(/recursos/img/Frutas.jpg);
+    background: url(../img/Frutas.jpg);
     background-size: cover;
     background-attachment: fixed;
    
@@ -32,14 +40,17 @@ h1{
 
 .formulario
 {
-    
+    position: absolute;
     background: #fff;
     margin-top: 4%;
     padding: 3px;
-    width: 50%;
+    width: 650px;
     border-radius: 5px;
     margin:0 auto;
-    float: none;
+    top: calc(50% - 250px);
+    right: calc(50% - 325px);
+    padding-bottom: 20px;
+    
 }
 
 input[type="submit"]

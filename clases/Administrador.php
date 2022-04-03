@@ -17,7 +17,9 @@
                     if($contador > 0){
                         header("location:menu.php");
                     }else{
-                        echo "Correo y contraseña incorrectas";
+                        
+                        echo "<p class=\"error\">Correo o contraseña incorrecta</p>";
+                    
                     }
                 }
             }
