@@ -72,7 +72,7 @@ class Proveedor extends Conexion{
                 $query = "UPDATE proveedor SET nombre='$this->nombre', direccion='$this->direccion', telefono='$this->telefono' WHERE id=$this->id";
                 $resultado = mysqli_query($this->con, $query);
                 if(!empty($resultado)){
-                    header("location:ver_proveedor.php");
+                    header("location:proveedor.php");
                 }
                 else{
                     echo "Error al actualizar el proveedor";
