@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="div-nav">
-                    <a class="nav" href="ver_proveedor.php">Proveedor</a>
+                    <a class="nav" href="proveedor.php">Proveedor</a>
                 </div>
 
                 <div class="div-nav">
