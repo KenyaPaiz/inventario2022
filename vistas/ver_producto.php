@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="div-nav">
-                    <a class="nav" href="ver_proveedor.php">Proveedor</a>
+                    <a class="nav" href="proveedor.php">Proveedor</a>
                 </div>
 
                 <div class="div-nav">
@@ -47,7 +47,6 @@
             require "../clases/producto.php";
             $producto = new Producto();
         ?>
-<<<<<<< HEAD
         <h1 class="titulo">Listado de productos</h1>
         <!-- <a href="registrar_producto.php">Registrar Producto</a><br> -->
         <form action="" method="post" class="formulario">
@@ -57,14 +56,6 @@
                 <input type="submit" name="buscar" value="Buscar">
                 
             </div>
-=======
-        <h1>Listado de productos</h1>
-        <a href="registrar_producto.php">Registrar Producto</a><br>
-        <form action="" method="post">
-            <b>Busqueda: </b>
-            <input type="text" name="busqueda" >
-            <input type="submit" id="btn-registrar" class="btn btn-dark" name="buscar" value="Buscar">
->>>>>>> a83219061ab46854de6b99a8ddf615fe26a096bf
         </form>
         <!--- Tabla de consultas -->
         <br>
@@ -79,7 +70,8 @@
                     <th class="th">Proveedor</th>
                     <th class="th">Marca</th>
                     <th class="th">Categoria</th>
-                    <th colspan="2">Acciones</th>
+                    <th></th>
+                    <th></th>
                 </thead>
                 <tbody>
                     <?php

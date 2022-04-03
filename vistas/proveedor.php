@@ -7,11 +7,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../recursos/css/estilo-nav.css">
-<<<<<<< HEAD:vistas/ver_proveedor.php
     <title>Ver Proveedor</title>
-=======
-    <title>Proveedor</title>
->>>>>>> a83219061ab46854de6b99a8ddf615fe26a096bf:vistas/proveedor.php
 </head>
 <body>
     <header class="encabezado">
