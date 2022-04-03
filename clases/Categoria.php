@@ -13,7 +13,7 @@
                  $query= "INSERT INTO categoria(nombre) VALUES ('$this->nombre')";
                  $resultado = mysqli_query($this->con,$query);
                  if(!empty($resultado)){
-                     echo "Se añadió categoría";
+                     header("location:categoria.php");
                  } 
              }
 

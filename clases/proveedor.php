@@ -18,7 +18,7 @@ class Proveedor extends Conexion{
                             VALUES ('$this->nombre','$this->direccion','$this->telefono')";
                 $resultado = mysqli_query($this->con,$query);
                 if(!empty($resultado)){
-                    echo "<p class='msj-ok'>¡Se agregó!</p>";
+                    header("location:proveedor.php");;
                 }
             }
         }
