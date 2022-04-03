@@ -1,6 +1,6 @@
 <?php
 require('conexion.php');
-//Responsabilidad unica
+//Respons0abilidad unica
 class Proveedor extends Conexion{
     public $id;
     public $nombre;
@@ -35,11 +35,12 @@ class Proveedor extends Conexion{
                 $tabla .= "<td>".$imprimir['direccion']."</td>";
                 $tabla .= "<td>".$imprimir['telefono']."</td>";
                 $tabla .= "<form action='act_proveedor.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-outline-success' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
         } 
+    
     }
 
     public function obtenerId(){
@@ -71,14 +72,13 @@ class Proveedor extends Conexion{
                 $query = "UPDATE proveedor SET nombre='$this->nombre', direccion='$this->direccion', telefono='$this->telefono' WHERE id=$this->id";
                 $resultado = mysqli_query($this->con, $query);
                 if(!empty($resultado)){
-                    header("location:ver_proveedor.php");
+                    header("location:proveedor.php");
                 }
                 else{
                     echo "Error al actualizar el proveedor";
                 }
             }
         }
-    }
-    
+    }  
 }
 ?>
