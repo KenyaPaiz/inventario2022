@@ -7,6 +7,8 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../recursos/css/estilo-nav.css">
+    <link rel="stylesheet" href="../recursos/css/estilo-categorias.css">
+   
     <title>Marca</title>
 </head>
 <body>
@@ -39,6 +41,7 @@
             
         </nav>
     </header>
+    <center>
     <div class="container">
         <?php
             require('../clases/Marca.php');
@@ -46,23 +49,24 @@
         ?>
         <h1>Registro de Marcas</h1>
         <form action="" method="POST">
-            <label for=""><b>Marca:</b></label>
-            <input type="text" name="marca" placeholder="Nombre de la marca">
-            <input type="submit" name="registrar" value="Registrar Marca">
+            <label class="label-marca" for=""><b>Marca:</b></label>
+            <input type="text" class="input-marca" name="marca" placeholder="Nombre de la marca">
+            <input type="submit" id="btn-registrar" class="btn btn-dark" name="registrar" value="Registrar Marca">
         </form>
         <?php $marca->registrar(); ?>
         <!--- Tabla de consultas -->
         <br>
-        <table>
+        <table class="table table-sm">
             <thead>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Accion</th>
+                <th class="th">#</th>
+                <th class="th">Nombre</th>
+                <th class="th">Accion</th>
             </thead>
             <tbody>
                 <?php $marca->consultar(); ?>
             </tbody>
         </table>
     </div>
+    </center>
 </body>
 </html>
