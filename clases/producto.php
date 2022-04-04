@@ -123,14 +123,22 @@
                 $resultado = mysqli_query($this->con, $query);
                 while($imprimir = mysqli_fetch_array($resultado)){
                     $form = "<input type='hidden' name='id' value='".$imprimir['id']."'>";
+                    $form .= "<div>";
                     $form .= "<label>Nombre:</label>";
                     $form .= " <input type='text' name='nombre' value='".$imprimir['nombre']."'><br>";
+                    $form .= "</div>";
+                    $form .= "<div>";
                     $form .= "<label>Descripcion:</label>";
                     $form .= " <input type='text' name='descripcion' value='".$imprimir['descripcion']."'><br>";
+                    $form .= "</div>";
+                    $form .= "<div>";
                     $form .= "<label>Precio:</label>";
                     $form .= " <input type='text' name='precio' value='".$imprimir['precio']."'><br>";
+                    $form .= "</div>";
+                    $form .= "<div>";
                     $form .= "<label>Cantidad:</label>";
                     $form .= " <input type='number' name='cantidad' value='".$imprimir['cantidad']."'><br>";        
+                    $form .= "</div>";
                     echo $form;
                 }
             }
