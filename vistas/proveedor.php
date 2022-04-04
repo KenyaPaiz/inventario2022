@@ -44,6 +44,7 @@
             
         </nav>
     </header>
+    <center>
     <div class="container">
         <?php
             require('../clases/proveedor.php');
@@ -75,5 +76,6 @@
             </tbody>
         </table>
     </div>
+    </center>
 </body>
 </html>
