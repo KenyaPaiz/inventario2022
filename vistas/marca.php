@@ -69,6 +69,7 @@
                 <?php $marca->consultar(); ?>
             </tbody>
         </table>
+        <?php $marca->eliminar(); ?>
     </div>
     </center>
 </body>
