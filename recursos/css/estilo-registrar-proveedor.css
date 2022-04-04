@@ -11,8 +11,9 @@
 
 .form
 {
-    margin: 20%;
-    padding: 0px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 h1
@@ -23,8 +24,8 @@ h1
 
 .label-text
 {
-   width: 100px;
-   margin-right: 20px;
+   width: 50px;
+   margin-right: 5px;
 }
 
 .imput-text
@@ -32,16 +33,18 @@ h1
     float: left;
     margin-bottom: 8px;
     margin-right: 5px;
-    margin-left: 5px;
 }
 
 .tabla
 {
-    padding: 60px;
+    padding: 85px;
 }
 
 .th
 {
     width: 30px;
-    padding-left: 50px;
+    padding-right: 100px;
 }
+
+
+

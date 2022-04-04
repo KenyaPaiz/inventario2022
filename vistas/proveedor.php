@@ -44,6 +44,7 @@
             
         </nav>
     </header>
+    <center>
     <div class="container">
         <?php
             require('../clases/proveedor.php');
@@ -76,5 +77,6 @@
         </table>
         <?php $proveedor->eliminar(); ?>
     </div>
+    </center>
 </body>
 </html>
