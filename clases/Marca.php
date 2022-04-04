@@ -13,7 +13,7 @@ class Marca extends Conexion{
                 $query = "INSERT INTO marca(nombre) VALUES ('$this->nombre')";
                 $resultado = mysqli_query($this->con,$query);
                 if(!empty($resultado)){
-                    echo "Se agrego";
+                    header("location:marca.php");
                 }
             }
         }
@@ -28,7 +28,7 @@ class Marca extends Conexion{
                 $tabla .= "<td>".$imprimir['id']."</td>";
                 $tabla .= "<td>".$imprimir['nombre']."</td>";
                 $tabla .= "<form action='ver_marca.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' name='idmarca' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<td><button type='submit' class='btn btn-outline-success' name='idmarca' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;

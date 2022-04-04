@@ -37,6 +37,9 @@
                 <div class="div-nav">
                     <a class="nav" href="registrar_producto.php">Registrar producto</a>
                 </div>
+                <div class="div-nav">
+                    <a class="nav" href="../index.php">Cerra Sesion</a>
+                </div>
             
         </nav>
     </header>
