@@ -5,6 +5,8 @@ class Marca extends Conexion{
     public $id;
     public $nombre;
 
+    
+
     public function registrar(){
         $this->conectar();
         if(isset($_POST['marca'])){
@@ -80,11 +82,15 @@ class Marca extends Conexion{
             $this->id = $_POST['delete_id'];
             $query= "DELETE FROM marca WHERE id=$this->id";
             $resultado = mysqli_query($this->con, $query);
+            // if(!empty($resultado)){
+            //     header("location:marca.php");
+            // }
             if(!empty($resultado)){
-                header("location:marca.php");
+                echo "";
             }
         }
     }
+
     
 }
 ?>

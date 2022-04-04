@@ -81,7 +81,8 @@
             $query= "DELETE FROM categoria WHERE id=$this->id";
             $resultado = mysqli_query($this->con, $query);
             if(!empty($resultado)){
-                header("location:categoria.php");
+                // header("location:categoria.php");
+                echo "";
             }
         }
     }

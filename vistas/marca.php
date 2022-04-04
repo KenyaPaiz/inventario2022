@@ -58,12 +58,12 @@
         </form>
         <?php $marca->registrar(); ?>
         <!--- Tabla de consultas -->
-        <br>
+        <!-- <br> -->
         <table class="table table-sm">
             <thead>
-                <th class="th">#</th>
-                <th class="th">Nombre</th>
-                <th class="th">Accion</th>
+                <th >#</th>
+                <th >Nombre</th>
+                <th >Accion</th>
             </thead>
             <tbody>
                 <?php $marca->consultar(); ?>

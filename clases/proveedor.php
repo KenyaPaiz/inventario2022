@@ -36,10 +36,10 @@ class Proveedor extends Conexion{
                 $tabla .= "<td>".$imprimir['direccion']."</td>";
                 $tabla .= "<td>".$imprimir['telefono']."</td>";
                 $tabla .= "<form action='act_proveedor.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
+                $tabla .= "<td><button type='submit' id='btn-act' class='btn btn-dark' name='idproveedor' value='".$imprimir['id']."'>Actualizar</button></td>";
                 $tabla .= "</form>";
-                $tabla .= "<form  method='POST'>";
-                    $tabla .= "<td class='td-cat'><button type='submit' class='btn btn-outline-danger' name='delete_id' value='".$imprimir['id']."'>Eliminar</button></td>";
+                $tabla .= "<form method='POST'>";
+                $tabla .= "<td class='td-cat'><button type='submit' class='btn btn-outline-danger' name='delete_id' value='".$imprimir['id']."'>Eliminar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
@@ -93,7 +93,8 @@ class Proveedor extends Conexion{
             $query= "DELETE FROM proveedor WHERE id=$this->id";
             $resultado = mysqli_query($this->con, $query);
             if(!empty($resultado)){
-                header("location:proveedor.php");
+                // header("location:proveedor.php");
+                echo "";
             }
         }
     }
