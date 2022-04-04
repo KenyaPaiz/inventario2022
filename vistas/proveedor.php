@@ -51,7 +51,7 @@
                 $proveedor = new Proveedor();
             ?>
             <h1 class="h1-contenedor">Registro de Proveedores</h1>
-            <form class="form" action="" method="POST">
+            <form class="form"action=""method="POST">
                 <label for=""><b>Nombre:</b></label>
                 <input type="text" name="nombre" placeholder="Digite su nombre">
                 <label for=""><b>Direccion:</b></label>
@@ -65,11 +65,11 @@
             <br>
             <table class="table table-sm">
                 <thead>
-                    <th class="th">#</th>
-                    <th class="th">Nombre</th>
-                    <th class="th">Direccion</th>
-                    <th class="th">Telefono</th>
-                    <th class="th">Accion</th>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Accion</th>
                 </thead>
                 <tbody>
                     <?php $proveedor->consultar(); ?>
