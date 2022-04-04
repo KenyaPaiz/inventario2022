@@ -75,6 +75,7 @@
                 <?php $proveedor->consultar(); ?>
             </tbody>
         </table>
+        <?php $proveedor->eliminar(); ?>
     </div>
     </center>
 </body>
