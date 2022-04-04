@@ -65,7 +65,7 @@
                 $query = "UPDATE categoria SET nombre='$this->nombre' WHERE id=$this->id";
                 $resultado = mysqli_query($this->con, $query);
                 if(!empty($resultado)){
-                    header("location:Categoria.php");
+                    header("location:categoria.php");
                 }
                 else{
                     echo "Error al actualizar categoría";

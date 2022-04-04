@@ -45,38 +45,38 @@
         </nav>
     </header>
     <center>
-    <div class="container">
-        <?php
-            require('../clases/proveedor.php');
-            $proveedor = new Proveedor();
-        ?>
-        <h1 class="h1-contenedor">Registro de Proveedores</h1>
-        <form class="form" action="" method="POST">
-            <label class="label-text" for=""><b>Nombre:</b></label>
-            <input class="imput-text" type="text" name="nombre" placeholder="Digite su nombre">
-            <label class="label-text" for=""><b>Direccion:</b></label>
-            <input class="imput-text" type="text" name="direccion" placeholder="Digite su direccion">
-            <label class="label-text" for=""><b>Telefono:</b></label>
-            <input class="imput-text" type="text" name="telefono" placeholder="Digite su telefono">
-            <input type="submit" name="registrar" class="btn btn-dark" value="Registrar Proveedor" id="button">
-        </form>
-        <?php $proveedor->registrar(); ?>
-        <!--- Tabla de consultas -->
-        <br>
-        <table class="tabla">
-            <thead>
-                <th class="th">#</th>
-                <th class="th">Nombre</th>
-                <th class="th">Direccion</th>
-                <th class="th">Telefono</th>
-                <th class="th">Accion</th>
-            </thead>
-            <tbody>
-                <?php $proveedor->consultar(); ?>
-            </tbody>
-        </table>
-        <?php $proveedor->eliminar(); ?>
-    </div>
+        <div class="container">
+            <?php
+                require('../clases/proveedor.php');
+                $proveedor = new Proveedor();
+            ?>
+            <h1 class="h1-contenedor">Registro de Proveedores</h1>
+            <form class="form" action="" method="POST">
+                <label class="label-text" for=""><b>Nombre:</b></label>
+                <input class="imput-text" type="text" name="nombre" placeholder="Digite su nombre">
+                <label class="label-text" for=""><b>Direccion:</b></label>
+                <input class="imput-text" type="text" name="direccion" placeholder="Digite su direccion">
+                <label class="label-text" for=""><b>Telefono:</b></label>
+                <input class="imput-text" type="text" name="telefono" placeholder="Digite su telefono">
+                <input type="submit" name="registrar" class="btn btn-dark" value="Registrar Proveedor" id="button">
+            </form>
+            <?php $proveedor->registrar(); ?>
+            <!--- Tabla de consultas -->
+            <br>
+            <table class="tabla">
+                <thead>
+                    <th class="th">#</th>
+                    <th class="th">Nombre</th>
+                    <th class="th">Direccion</th>
+                    <th class="th">Telefono</th>
+                    <th class="th">Accion</th>
+                </thead>
+                <tbody>
+                    <?php $proveedor->consultar(); ?>
+                </tbody>
+            </table>
+            <?php $proveedor->eliminar(); ?>
+        </div>
     </center>
 </body>
 </html>
