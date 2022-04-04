@@ -13,7 +13,7 @@
                  $query= "INSERT INTO categoria(nombre) VALUES ('$this->nombre')";
                  $resultado = mysqli_query($this->con,$query);
                  if(!empty($resultado)){
-                     echo "Se añadió categoría";
+                     header("location:categoria.php");
                  } 
              }
 
@@ -24,9 +24,10 @@
          $this->conectar();
          $query ="SELECT * FROM categoria";
          $resultado = mysqli_query($this->con,$query);
+         $cont = 1;
          while($imprimir = mysqli_fetch_array($resultado)){
             $tabla="<tr>";
-                $tabla .= "<td>".$imprimir['id']."</td>";
+                $tabla .= "<td>$cont</td>";
                 $tabla .= "<td>".$imprimir['nombre']."</td>";
                 $tabla .= "<form action='ver_categoria.php' method='POST'>";
                     $tabla .= "<td><button type='submit' class='btn btn-outline-success' name='id' value='".$imprimir['id']."'>Actualizar</button></td>";
@@ -36,6 +37,7 @@
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
+            $cont++;
          }
      }
     
@@ -63,7 +65,7 @@
                 $query = "UPDATE categoria SET nombre='$this->nombre' WHERE id=$this->id";
                 $resultado = mysqli_query($this->con, $query);
                 if(!empty($resultado)){
-                    header("location:Categoria.php");
+                    header("location:categoria.php");
                 }
                 else{
                     echo "Error al actualizar categoría";

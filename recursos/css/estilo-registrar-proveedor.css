@@ -6,49 +6,38 @@
 
 .container
 {
-    margin-top: 5%;
-    padding: 10px;
-}
-
-h2
-{
-    color: #1a2537;
-    width: 450px;
-    padding: 15px;
+    margin: 0%;
 }
 
 .form
 {
-    padding: 12px;
-    width: 650px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
-.btn-div
+h1
 {
-    padding: 12px;
-    margin-top: 14px;
-    margin-bottom: 19px;
+    margin-top: 10px;
+    color: #1a2537;
 }
 
-#btn-registrar
+.label-text
 {
-    padding: 10px;
+   width: 50px;
+   margin-right: 5px;
 }
 
-#btn-registrar:hover
+.imput-text
 {
-    color: aqua;
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 5px;
 }
 
-#btn-act
+.tabla
 {
-    padding: 5px;
-}
-
-.barras
-{
-    width: 250px;
-    padding-left: 5px;
+    padding: 85px;
 }
 
 .th
@@ -56,17 +45,5 @@ h2
     color: #1a2537;
 }
 
-#tabla
-{
-    padding: 85px;
-}
 
-.tabla-contenedor
-{
-    margin: 40px;
-}
 
-.msj-ok
-{
-    color: green;
-}

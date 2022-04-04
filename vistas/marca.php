@@ -38,6 +38,9 @@
                 <div class="div-nav">
                     <a class="nav" href="registrar_producto.php">Registrar producto</a>
                 </div>
+                <div class="div-nav">
+                    <a class="nav" href="../index.php">Cerra Sesion</a>
+                </div>
             
         </nav>
     </header>
@@ -50,7 +53,7 @@
         <h1>Registro de Marcas</h1>
         <form action="" method="POST">
             <label class="label-marca" for=""><b>Marca:</b></label>
-            <input type="text" class="input-marca" name="marca" placeholder="Nombre de la marca">
+            <input type="text" class="input-marca" name="marca" placeholder="Nombre de la marca" required><br>
             <input type="submit" id="btn-registrar" class="btn btn-dark" name="registrar" value="Registrar Marca">
         </form>
         <?php $marca->registrar(); ?>
@@ -66,6 +69,7 @@
                 <?php $marca->consultar(); ?>
             </tbody>
         </table>
+        <?php $marca->eliminar(); ?>
     </div>
     </center>
 </body>

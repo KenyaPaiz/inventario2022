@@ -37,6 +37,9 @@
                 <div class="div-nav">
                     <a class="nav" href="registrar_producto.php">Registrar producto</a>
                 </div>
+                <div class="div-nav">
+                    <a class="nav" href="../index.php">Cerra Sesion</a>
+                </div>
             
         </nav>
     </header>
@@ -50,13 +53,13 @@
             <h1>Registrar Producto</h1>
 
             <label class="label-producto" for="producto_nombre">Nombre:</label>
-            <input type="text" class="subtitulos" name="nombre" placeholder="Nombre del producto..."><br>
+            <input type="text" class="subtitulos" name="nombre" placeholder="Nombre del producto..." required><br>
 
             <label class="label-producto" for="descripcion">Descripción:</label>
-            <input type="text" class="subtitulos" name="descripcion" placeholder="descripcion"><br>
+            <input type="text" class="subtitulos" name="descripcion" placeholder="descripcion" required><br>
 
             <label class="label-producto" for="precio">Precio:</label>
-            <input type="text" class="subtitulos" name="precio" placeholder="Precio..."><br>
+            <input type="text" class="subtitulos" name="precio" placeholder="Precio..." required><br>
 
             <label class="label-producto" for="categoria">Categoria:</label>
             <select class="subtitulos" name="categoria">
@@ -73,7 +76,7 @@
                 <?php $producto->selectProveedor(); ?>
             </select><br>
             <label class="label-producto" for="">Existencias</label>
-            <input type="number" class="subtitulos" name="existencias"><br><br>
+            <input type="number" class="subtitulos" name="existencias" required><br><br>
             <input type="submit" id="btn-registrar" class="btn btn-dark" name="registrar" value="Registrar Producto">
         </form>
         <?php $producto->registrar(); ?>

@@ -13,7 +13,7 @@ class Marca extends Conexion{
                 $query = "INSERT INTO marca(nombre) VALUES ('$this->nombre')";
                 $resultado = mysqli_query($this->con,$query);
                 if(!empty($resultado)){
-                    echo "Se agrego";
+                    header("location:marca.php");
                 }
             }
         }
@@ -23,15 +23,20 @@ class Marca extends Conexion{
         $this->conectar();
         $query = "SELECT * FROM marca";
         $resultado = mysqli_query($this->con, $query);
+        $cont = 1;
         while($imprimir = mysqli_fetch_array($resultado)){
             $tabla = "<tr>";
-                $tabla .= "<td>".$imprimir['id']."</td>";
+                $tabla .= "<td>$cont</td>";
                 $tabla .= "<td>".$imprimir['nombre']."</td>";
                 $tabla .= "<form action='ver_marca.php' method='POST'>";
-                    $tabla .= "<td><button type='submit' name='idmarca' value='".$imprimir['id']."'>Actualizar</button></td>";
+                    $tabla .= "<td><button type='submit' class='btn btn-outline-success' name='idmarca' value='".$imprimir['id']."'>Actualizar</button></td>";
+                $tabla .= "</form>";
+                $tabla .= "<form  method='POST'>";
+                    $tabla .= "<td><button type='submit' class='btn btn-outline-danger' name='delete_id' value='".$imprimir['id']."'>Eliminar</button></td>";
                 $tabla .= "</form>";
             $tabla .= "</tr>";
             echo $tabla;
+            $cont++;
         } 
     }
     
@@ -65,6 +70,18 @@ class Marca extends Conexion{
                 else{
                     echo "Error al actualizar la marca";
                 }
+            }
+        }
+    }
+
+    public function eliminar(){
+        $this->conectar();
+        if(isset($_POST['delete_id'])){
+            $this->id = $_POST['delete_id'];
+            $query= "DELETE FROM marca WHERE id=$this->id";
+            $resultado = mysqli_query($this->con, $query);
+            if(!empty($resultado)){
+                header("location:marca.php");
             }
         }
     }

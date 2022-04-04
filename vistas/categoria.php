@@ -37,6 +37,9 @@
                 <div class="div-nav">
                     <a class="nav" href="registrar_producto.php">Registrar producto</a>
                 </div>
+                <div class="div-nav">
+                    <a class="nav" href="../index.php">Cerra Sesion</a>
+                </div>
             
         </nav>
     </header>
@@ -51,7 +54,7 @@
             </div>
             <form action="" method="POST">
                 <label class="label-categoria" for=""><b>Categoria:</b></label>
-                <input type="text" class="input-categoria" name="categoria" placeholder="Categoria"> </br>
+                <input type="text" class="input-categoria" name="categoria" placeholder="Categoria" required> </br>
                 <input type="submit" id="btn-registrar" class="btn btn-dark" name="registrar" value="Registrar categoria">
             </form>
             <?php $categoria->registrar(); ?>
