@@ -14,7 +14,7 @@
     <h1>Actualizar Marca</h1>
     <form method="POST">
         <?php $marca->obtenerId(); ?>
-        <input type="submit" name="actualizar" value="Actualizar Marca">
+        <input type="submit" class="btn btn-dark" name="actualizar" value="Actualizar Marca">
     </form>
     <?php $marca->actualizar(); ?>
 </body>
