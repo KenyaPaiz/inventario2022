@@ -11,6 +11,18 @@
     <title>Marca</title>
 </head>
 <body>
+<<<<<<< HEAD
+    <?php 
+        require('../clases/Marca.php');
+        $marca = new Marca(); 
+    ?>
+    <h1>Actualizar Marca</h1>
+    <form method="POST">
+        <?php $marca->obtenerId(); ?>
+        <input type="submit" class="btn btn-dark" name="actualizar" value="Actualizar Marca">
+    </form>
+    <?php $marca->actualizar(); ?>
+=======
     <header class="encabezado">
         <nav>
 
@@ -57,5 +69,6 @@
             <?php $marca->actualizar(); ?>
         </div>
     </center>
+>>>>>>> 34a305dc023b1dc6041951aa52d553f978a895e1
 </body>
 </html>
