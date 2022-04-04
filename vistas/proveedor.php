@@ -52,18 +52,18 @@
         ?>
         <h1 class="h1-contenedor">Registro de Proveedores</h1>
         <form class="form" action="" method="POST">
-            <label class="label-text" for=""><b>Nombre:</b></label>
-            <input class="imput-text" type="text" name="nombre" placeholder="Digite su nombre">
-            <label class="label-text" for=""><b>Direccion:</b></label>
-            <input class="imput-text" type="text" name="direccion" placeholder="Digite su direccion">
-            <label class="label-text" for=""><b>Telefono:</b></label>
-            <input class="imput-text" type="text" name="telefono" placeholder="Digite su telefono">
+            <label for=""><b>Nombre:</b></label>
+            <input type="text" name="nombre" placeholder="Digite su nombre">
+            <label for=""><b>Direccion:</b></label>
+            <input type="text" name="direccion" placeholder="Digite su direccion">
+            <label for=""><b>Telefono:</b></label>
+            <input type="text" name="telefono" placeholder="Digite su telefono">
             <input type="submit" name="registrar" class="btn btn-dark" value="Registrar Proveedor" id="button">
         </form>
         <?php $proveedor->registrar(); ?>
         <!--- Tabla de consultas -->
         <br>
-        <table class="tabla">
+        <table class= "table table-sm">
             <thead>
                 <th class="th">#</th>
                 <th class="th">Nombre</th>
